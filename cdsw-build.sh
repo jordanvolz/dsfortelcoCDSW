@@ -3,8 +3,16 @@
 if [ -d "models/spark/" ] 
 then
   rm -r -f models/spark/*
-  if [ -f "models/spark_rf.tar" ]
-  then tar -xf models/spark_rf.tar 
-  fi
+else
+  mkdir -p models/spark
 fi
 
+if [ -f "spark_rf.tar" ]
+then 
+  tar -xf spark_rf.tar 
+fi
+
+if [ -f "sklearn_rf.pkl" ]
+then 
+  mv sklearn_rf.pkl models
+fi
