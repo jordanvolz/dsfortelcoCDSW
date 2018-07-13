@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 if [ -d "models/spark/" ] 
 then
   rm -r -f models/spark/*
